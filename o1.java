@@ -35,3 +35,58 @@ public class HelloWorld {
         System.out.println("Hello, World!");
     }
 }
+
+
+public class PrimeCheck {
+    public static void main(String[] args) {
+        int num = 7;
+        boolean isPrime = true;
+
+        if (num <= 1) isPrime = false;
+
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime)
+            System.out.println("Prime Number");
+        else
+            System.out.println("Not Prime Number");
+    }
+}
+
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        int n = 6;
+        int a = 0, b = 1;
+
+        System.out.print(a + " " + b + " ");
+
+        for (int i = 2; i < n; i++) {
+            int c = a + b;
+            System.out.print(c + " ");
+            a = b;
+            b = c;
+        }
+    }
+}
+
+
+public class LargestInArray {
+    public static void main(String[] args) {
+        int[] arr = {10, 45, 23, 89, 12};
+        int max = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        System.out.println("Largest Number: " + max);
+    }
+}
